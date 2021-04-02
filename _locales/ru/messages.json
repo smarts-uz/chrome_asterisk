@@ -1,0 +1,10 @@
+{
+   "contextMenuCall": {
+      "description": "",
+      "message": "Вызвать"
+   },
+   "highlightToggle": {
+      "description": "",
+      "message": "Подсветка номеров выключена"
+   }
+}

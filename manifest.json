@@ -1,0 +1,28 @@
+{
+   "author": "Bitree",
+   "background": {
+      "scripts": [ "popup.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "phone16.png"
+      },
+      "default_popup": "history.html"
+   },
+   "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+   "default_locale": "en",
+   "description": "Popup with CallerID",
+   "icons": {
+      "128": "phone128.png",
+      "16": "phone16.png",
+      "48": "phone48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAirUoilwo8zX/au/Gjsjyo+5R92uBoC/bosYzTtz9lxuwonr81gkA2G8CPlwTSLH5YW/yFbrz13ae0Hr/zTQYXoii58rSatAoV/FvDoS4QtqODyrzPv6okr9AVksVq0q0SJ4HR7D77N3stFC5eKde5ZutWZdMpohkK63WjiA9/mNwr9yhSUrvVKcjrUpjOP7EpvS58N1qsamNYJ+By5NeSmwvyGYRF0dPrGtHUsFexMf4c6gC494+YDzidDC4DigTxscg+tmHjmgLbNR/uVzguH4UglaX7vkqaRFl0fBYzi3+Hy4YCz/zjhCL6Srl53zE/0Ro7krzPS9mq9oI9X6OqwIDAQAB",
+   "manifest_version": 2,
+   "name": "Asterisk Screenpop",
+   "options_page": "options.html",
+   "permissions": [ "notifications", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.0.5",
+   "web_accessible_resources": [ "phone16.png", "phone48.png" ]
+}

@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>Asterisk Screenpop Options</title>
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+<style>
+fieldset {
+    margin: 8px;
+    border: 1px solid silver;
+    padding: 8px;    
+    border-radius: 4px;
+}
+
+legend {
+    font-size: 12;
+    padding: 2px;    
+    margin-bottom: 0px;
+}
+</style>
+
+</head>
+
+
+<body>
+ <div class="container" style="margin-top:20px">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h3>Asterisk Screenpop Options<h3></div>
+                    <div class="panel-body" style="height:350px;">
+			<form class="form-vertical">
+			<div class="form-group col-md-12">
+				<div class="checkbox">
+					<label for="arienable"><input type="checkbox" name="arienable" id="arienable">Enable screenpop </label>
+				</div>
+
+			</div>
+			<div class="form-group  col-md-8">
+				<label for="ip">ARI IP:PORT</label>
+				<input class="form-control" name="ip" id="ip" placeholder="asterisk:8080"></input>
+			</div>
+
+			<div class="form-group col-md-4">
+				<label for="exten">Extension:</label>
+				<input class="form-control" name="exten" id="exten" placeholder="000"></input>
+			</div>
+			<div class="form-group col-md-6">
+				<label for="username">Username:</label>
+				<input class="form-control" size="65" id="username" name="username"></input>
+			</div>
+			<div class="form-group col-md-6">
+				<label for="secret">Secret:</label>
+				<input class="form-control" size="65" type="password" id="secret" name="secret"></input>
+			</div>
+			<div class="form-group col-md-12">
+				<label for="url">URL to pass CallerID ({CALLERID})</label>
+				<input class="form-control" name="url" id="url" placeholder="http://crm?callerid={CALLERID}"></input>
+			</div>
+
+			
+			
+			
+			</form>
+			<div class="form-group col-md-12" style="margin-top:10px;">
+				<button id="save" class="btn-block btn btn-primary" >Save</button>
+				<div class="col-md-12 alert text-center" style="margin-top:10px;display:none;" id="state"></div>
+			</div>
+
+		    </div>	
+                  <div class="panel-footer">&copy; Bitree 2017</div>
+		 </div>
+		</div>
+	     </div>
+	   </div>
+</div> <!-- container --> 
+
+</body>
+
+
+<script src="jquery-2.0.3.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="options.js"></script>
+
+
+</html>

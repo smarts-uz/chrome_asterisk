@@ -1,0 +1,10 @@
+{
+   "contextMenuCall": {
+      "description": "",
+      "message": "Call"
+   },
+   "highlightToggle": {
+      "description": "",
+      "message": "Highlight phone numbers toggle"
+   }
+}
