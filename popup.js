@@ -68,15 +68,15 @@ function showPopup(a, b) {
 
     // http://callapp.teampro.uz/tbl-call/index.aspx?call={caller.number}&name={id}&app={connected.name}
 
-
     //    window.open('https://github.com/spbx/Simple-Click2Call-for-Asterisk-PBX/?data=' + b.channel.connected.number);
     
     var c = {type: "basic", title: "Asterisk Screenpop", message: a, iconUrl: "phone48.png"};
     chrome.notifications.create(ari.app, c, function (a) {
     }), chrome.notifications.onButtonClicked.addListener(function () {
         var a = ari.url.replace("{connected.number}", b.channel.connected.number);
-        var a = a.replace("{connected.name}", b.channel.connected.name);
-        var a = a.replace("{connected.name}", b.channel.connected.name);
+        a = a.replace("{connected.name}", b.channel.connected.name);
+        a = a.replace("{caller.number}", b.channel.caller.number);
+        a = a.replace("{id}", b.channel.id);
         window.open(a);
     }), ga("send", "event", "Ringing", "event");
 }
