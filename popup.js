@@ -28,7 +28,6 @@ function parseEvent(a) {
                 case"Ringing":
                     console.log(b.channel), call.time = Date.now(), call.ext = b.channel.caller.number, call.id = b.channel.id, call.from = b.channel.connected.name + " <" + b.channel.connected.number + ">", call.state = "Ringing";
                     var c = "Incoming call from " + b.channel.connected.name + " <" + b.channel.connected.number + ">";
-
                     showPopup(c, b);
                     break;
                 case"Up":
@@ -59,24 +58,25 @@ function doLogin() {
 
 function showPopup(a, b) {
 
-
     /// b.channel.connected.number  {connected.number}
     /// b.channel.connected.name    {connected.name}
     // b.channel.caller.number   {caller.number}
     // b.channel.id               {id}
-    // b.channel.state
+    // b.channel.state            {state}
+    //http://callapp.teampro.uz/tbl-call/index.aspx?caller={caller.number}&id={id}&name={connected.name}&number={connected.number}
 
-    // http://callapp.teampro.uz/tbl-call/index.aspx?call={caller.number}&name={id}&app={connected.name}
+    var ur = ari.url.replace("{caller.number}", b.channel.caller.number);
+        ur = ur.replace("{id}", b.channel.id);
+        ur = ur.replace("{connected.name}", b.channel.connected.name);
+        ur = ur.replace("{connected.number}", b.channel.connected.number);
+    window.open(ur)
 
-    //    window.open('https://github.com/spbx/Simple-Click2Call-for-Asterisk-PBX/?data=' + b.channel.connected.number);
-    
     var c = {type: "basic", title: "Asterisk Screenpop", message: a, iconUrl: "phone48.png"};
     chrome.notifications.create(ari.app, c, function (a) {
     }), chrome.notifications.onButtonClicked.addListener(function () {
         var a = ari.url.replace("{connected.number}", b.channel.connected.number);
         a = a.replace("{connected.name}", b.channel.connected.name);
         a = a.replace("{caller.number}", b.channel.caller.number);
-        a = a.replace("{id}", b.channel.id);
         window.open(a);
     }), ga("send", "event", "Ringing", "event");
 }
