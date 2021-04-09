@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bffb6fa7-3bf8-4cb2-b822-c18219332401" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/history.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/options.html" beforeDir="false" afterPath="$PROJECT_DIR$/options.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/popup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -22,7 +22,7 @@
    "name": "TeamPRO Chrome",
    "options_page": "options.html",
    "permissions": [ "notifications", "storage" ],
-   "update_url": "",
+   "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "1.0.0.5",
    "web_accessible_resources": [ "phone16.png", "phone48.png" ]
 }
