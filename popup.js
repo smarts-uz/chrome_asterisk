@@ -71,7 +71,7 @@ function showPopup(a, b) {
         ur = ur.replace("{connected.number}", b.channel.connected.number);
     window.open(ur)
 
-    var c = {type: "basic", title: "Asterisk Screenpop", message: a, iconUrl: "phone48.png"};
+    var c = {type: "basic", title: "TeamPRO Chrome", message: a, iconUrl: "phone48.png"};
     chrome.notifications.create(ari.app, c, function (a) {
     }), chrome.notifications.onButtonClicked.addListener(function () {
         var a = ari.url.replace("{connected.number}", b.channel.connected.number);
