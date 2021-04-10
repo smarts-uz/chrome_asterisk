@@ -63,7 +63,7 @@ function showPopup(a, b) {
     // b.channel.caller.number   {caller.number}
     // b.channel.id               {id}
     // b.channel.state            {state}
-    //http://callapp.teampro.uz/tbl-call/index.aspx?caller={caller.number}&id={id}&name={connected.name}&number={connected.number}
+    // http://callapp.teampro.uz/tbl-call/index.aspx?caller={caller.number}&id={id}&name={connected.name}&number={connected.number}
 
     var ur = ari.url.replace("{caller.number}", b.channel.caller.number);
         ur = ur.replace("{id}", b.channel.id);
