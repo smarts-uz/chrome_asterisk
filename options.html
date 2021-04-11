@@ -23,42 +23,49 @@ legend {
 <body>
  <div class="container" style="margin-top:20px">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading"><h3>TeamPRO Chrome Options<h3></div>
                     <div class="panel-body" >
 			<form class="form-vertical">
 			<div class="form-group col-md-12">
 				<div class="checkbox">
-					<label for="arienable"><input type="checkbox" name="arienable" id="arienable">Enable screenpop </label>
+					<label for="arienable"><input type="checkbox" name="arienable" id="arienable">Enable App </label>
 				</div>
 
 			</div>
 			<div class="form-group  col-md-8">
 				<label for="ip">ARI IP:PORT</label>
-				<input class="form-control" name="ip" id="ip" placeholder="asterisk:8080"></input>
+				<input class="form-control" name="ip" id="ip" placeholder="asterisk:8088"/>
 			</div>
 
 			<div class="form-group col-md-4">
 				<label for="exten">Extension:</label>
-				<input class="form-control" name="exten" id="exten" placeholder="000"></input>
+				<input class="form-control" name="exten" id="exten" placeholder="0000"/>
 			</div>
 			<div class="form-group col-md-6">
-				<label for="username">Username:</label>
-				<input class="form-control" size="65" id="username" name="username"/>
+				<label for="username">ARI Username:</label>
+				<input class="form-control" size="65" id="username" name="username" placeholder="rest"/>
 			</div>
 			<div class="form-group col-md-6">
-				<label for="secret">Secret:</label>
-				<input class="form-control" size="65" type="password" id="secret" name="secret"/>
+				<label for="secret">ARI Password:</label>
+				<input class="form-control" size="65" type="password" id="secret" name="secret" placeholder="rest"/>
 			</div>
 			<div class="form-group col-md-12">
-				<label for="url">URL to pass CallerID ({caller.number}, {id}, {connected.name}, {connected.number})</label>
-				<input class="form-control" name="url" id="url"
-					   value="http://callapp.teampro.uz/tbl-call/index.aspx?number={connected.number}&caller={caller.number}&id={id}&name={connected.name}&state={state}"/>
-				<br/>
-				<p>http://callapp.teampro.uz/tbl-call/index.aspx?caller={caller.number}&id={id}&name={connected.name}&number={connected.number}</p>
+		<!--
+		    // b.channel.connected.number   {connected.number}
+    // b.channel.connected.name     {connected.name}
+    // b.channel.caller.number      {caller.number}
+    // b.channel.id                 {id}
+    // b.channel.state              {state}
+		-->
 
-				http://callapp.teampro.uz/tbl-call/create-asror.aspx?Direction=In&CallNumber=1002&UniqueID=1617448040.166&name=1009&PhoneNumber=1009
+				<label for="url">URL to open in new tab: </label>
+				<p><b>Variables:</b> {connected.number} | {connected.name} | {caller.number} | {id} | {state}</p>
+				<input class="form-control" name="url" id="url"
+					   placeholder="http://callapp.teampro.uz/tbl-call/index.aspx?number={connected.number}&caller={caller.number}&id={id}&name={connected.name}&state={state}"/>
+				<br/>
+
 				
 			</div>
 		
@@ -72,7 +79,7 @@ legend {
 			</div>
 
 		    </div>	
-                  <div class="panel-footer">&copy; Bitree 2017</div>
+                  <div class="panel-footer">&copy; TeamPRO 2017</div>
 		 </div>
 		</div>
 	     </div>
