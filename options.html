@@ -45,15 +45,16 @@ legend {
 			</div>
 			<div class="form-group col-md-6">
 				<label for="username">Username:</label>
-				<input class="form-control" size="65" id="username" name="username"></input>
+				<input class="form-control" size="65" id="username" name="username"/>
 			</div>
 			<div class="form-group col-md-6">
 				<label for="secret">Secret:</label>
-				<input class="form-control" size="65" type="password" id="secret" name="secret"></input>
+				<input class="form-control" size="65" type="password" id="secret" name="secret"/>
 			</div>
 			<div class="form-group col-md-12">
 				<label for="url">URL to pass CallerID ({caller.number}, {id}, {connected.name}, {connected.number})</label>
-				<input class="form-control" name="url" id="url" placeholder="http://crm?callerid={CALLERID}"></input>
+				<input class="form-control" name="url" id="url"
+					   value="http://callapp.teampro.uz/tbl-call/index.aspx?number={connected.number}&caller={caller.number}&id={id}&name={connected.name}&state={state}"/>
 				<br/>
 				<p>http://callapp.teampro.uz/tbl-call/index.aspx?caller={caller.number}&id={id}&name={connected.name}&number={connected.number}</p>
 

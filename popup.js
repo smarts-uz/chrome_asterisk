@@ -58,12 +58,13 @@ function doLogin() {
 
 function showPopup(a, b) {
 
-    /// b.channel.connected.number  {connected.number}
-    /// b.channel.connected.name    {connected.name}
-    // b.channel.caller.number   {caller.number}
-    // b.channel.id               {id}
-    // b.channel.state            {state}
-    // http://callapp.teampro.uz/tbl-call/index.aspx?caller={caller.number}&id={id}&name={connected.name}&number={connected.number}
+    // b.channel.connected.number   {connected.number}
+    // b.channel.connected.name     {connected.name}
+    // b.channel.caller.number      {caller.number}
+    // b.channel.id                 {id}
+    // b.channel.state              {state}
+    
+    // http://callapp.teampro.uz/tbl-call/index.aspx?number={connected.number}&caller={caller.number}&id={id}&name={connected.name}&state={state}
 
     var ur = ari.url.replace("{caller.number}", b.channel.caller.number);
         ur = ur.replace("{id}", b.channel.id);
