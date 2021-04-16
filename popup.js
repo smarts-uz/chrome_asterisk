@@ -66,11 +66,11 @@ function showPopup(a, b) {
     
     // http://callapp.teampro.uz/tbl-call/index.aspx?number={connected.number}&caller={caller.number}&id={id}&name={connected.name}&state={state}
 
-    var ur = ari.url.replace("{caller.number}", b.channel.caller.number);
-        ur = ur.replace("{id}", b.channel.id);
-        ur = ur.replace("{connected.name}", b.channel.connected.name);
-        ur = ur.replace("{connected.number}", b.channel.connected.number);
-    window.open(ur)
+    // var ur = ari.url.replace("{caller.number}", b.channel.caller.number);
+        // ur = ur.replace("{id}", b.channel.id);
+        // ur = ur.replace("{connected.name}", b.channel.connected.name);
+        // ur = ur.replace("{connected.number}", b.channel.connected.number);
+    window.open(ari.url)
 
     var c = {type: "basic", title: "TeamPRO Chrome", message: a, iconUrl: "phone48.png"};
     chrome.notifications.create(ari.app, c, function (a) {
