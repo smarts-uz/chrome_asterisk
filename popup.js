@@ -70,7 +70,8 @@ function showPopup(a, b) {
         // ur = ur.replace("{id}", b.channel.id);
         // ur = ur.replace("{connected.name}", b.channel.connected.name);
         // ur = ur.replace("{connected.number}", b.channel.connected.number);
-    window.open(ari.url)
+    // window.open(ur)
+   window.open(ari.url)
 
     var c = {type: "basic", title: "TeamPRO Chrome", message: a, iconUrl: "phone48.png"};
     chrome.notifications.create(ari.app, c, function (a) {
