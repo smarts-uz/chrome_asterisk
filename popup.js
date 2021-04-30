@@ -6,10 +6,11 @@ function init() {
 
 function httpSend(a, b) {
     var c = new XMLHttpRequest, d = "http://" + ari.ip + "/ari/" + b + "&api_key=" + ari.user + ":" + ari.secret;
+
     console.log("requesting: " + a + " " + d), c.open(a, d, !0, ari.user, ari.secret), c.addEventListener("load", function () {
-        console.log("http " + a + " " + d)
+        console.log("http " + a + " " + d);
     }), c.addEventListener("error", function () {
-        console.log("http " + a + " error")
+        console.log("http " + a + " error");
     }), c.send(null)
 }
 
@@ -44,7 +45,7 @@ function parseEvent(a) {
 function doLogin() {
     var a = new WebSocket("ws://" + ari.ip + "/ari/events?api_key=" + ari.user + ":" + ari.secret + "&app=" + ari.app + "&subscribeAll=true");
     ari.socket = a, a.onmessage = function (a) {
-        parseEvent(a.data)
+        parseEvent(a.data) ;
     }, a.onopen = function () {
         console.log("Connected"), httpSend("POST", "applications/" + ari.app + "/subscription?eventSource=channel:,endpoint:,bridge:,deviceState:")
     }, a.onclose = function () {
@@ -63,14 +64,14 @@ function showPopup(a, b) {
     // b.channel.caller.number      {caller.number}
     // b.channel.id                 {id}
     // b.channel.state              {state}
-    
+
     // http://callapp.teampro.uz/tbl-call/index.aspx?number={connected.number}&caller={caller.number}&id={id}&name={connected.name}&state={state}
 
     // var ur = ari.url.replace("{caller.number}", b.channel.caller.number);
-        // ur = ur.replace("{id}", b.channel.id);
-        // ur = ur.replace("{connected.name}", b.channel.connected.name);
-        // ur = ur.replace("{connected.number}", b.channel.connected.number);
-    window.open(ari.url)
+    // ur = ur.replace("{id}", b.channel.id);
+    // ur = ur.replace("{connected.name}", b.channel.connected.name);
+    // ur = ur.replace("{connected.number}", b.channel.connected.number);
+    window.open(ari.url);
 
     var c = {type: "basic", title: "TeamPRO Chrome", message: a, iconUrl: "phone48.png"};
     chrome.notifications.create(ari.app, c, function (a) {

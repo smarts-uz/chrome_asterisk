@@ -1,0 +1,31 @@
+{
+   "author": "TeamPRO",
+   "background": {
+      "scripts": [ "popup.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "phone16.png"
+      },
+      "default_popup": "history.html"
+   },
+   "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+   "default_locale": "en",
+   "description": "Popup with CallerID",
+   "icons": {
+      "128": "phone128.png",
+      "16": "phone16.png",
+      "48": "phone48.png"
+   },
+   "manifest_version": 2,
+   "name": "TeamPRO Chrome",
+   "devtools_page": "options.html",
+   "permissions": [ "notifications", "storage", "find" ],
+   "version": "1.0.0.5",
+   "web_accessible_resources": [ "phone16.png", "phone48.png" ],
+   "sidebar_action": {
+      "default_icon": "phone48.png",
+      "default_title" : "My options",
+      "default_panel": "options.html"
+   }
+}
